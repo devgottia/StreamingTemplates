@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ $page->page_title }}</title>
+
+
+    {!! htmlspecialchars_decode($ads->head_tag_ads_code) !!}
+  </head>
+  <body>
+    <nav>
+      <a href="#">Sports90</a>
+    </nav>
+
+    <div class="container">
+      <div class="main">
+        <div class="leftSidebar item">
+          <div class="leftSidebarAds">
+            {!! htmlspecialchars_decode($ads->left_player_ads_code) !!}
+          </div>
+        </div>
+        <div class="player item">
+          <div class="playerTopAd">
+            {!! htmlspecialchars_decode($ads->top_player_ads_code) !!}
+          </div>
+
+          <span id="postTitle" style="color: white"
+            >{{ $page->page_title }}</span
+          >
+
+          <div id="backlinks">
+            <div>
+              <a href="https://soccerstreamlinks.com/" target="_blank"
+                >SOCCER STREAMS &nbsp</a
+              ><span>||</span>&nbsp
+            </div>
+            <div>
+              <a href="https://redditnflstreams.cc/" target="_blank"
+                >NBA STREAMS &nbsp</a
+              ><span>||</span>&nbsp
+            </div>
+            <div>
+              <a href="https://redditnhlstreams.cc/" target="_blank"
+                >NHL STREAMS &nbsp</a
+              ><span>||</span>&nbsp
+            </div>
+            <div>
+              <a href="https://redditmlbstreams.cc/" target="_blank"
+                >MLB STREAMS &nbsp</a
+              ><span>||</span>&nbsp
+            </div>
+            <div>
+              <a href="https://redditmmastreams.cc/" target="_blank"
+                >MMA STREAMS &nbsp</a
+              ><span></span>&nbsp
+            </div>
+          </div>
+          <div id="playerContainer">
+            <div style="width: 640px; height: 480px">
+              {!! $page->page_data !!}
+            </div>
+          </div>
+
+          <div class="bottomAd">
+            <div class="playerBottomAd">
+              {!! htmlspecialchars_decode($ads->bottom_player_ads_code) !!}
+            </div>
+          </div>
+        </div>
+        <div class="rightSidebar item">
+          <div class="rightSideBarAds">
+            <div class="rightAdsWrapper">
+              {!! htmlspecialchars_decode($ads->footer_ads_code) !!}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
